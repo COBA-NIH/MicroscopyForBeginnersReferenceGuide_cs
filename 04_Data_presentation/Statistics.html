@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Statistics &#8212; Microscopy for Beginners reference guide</title>
+    <title>Statistika &#8212; Microscopy for Beginners reference guide</title>
   
   
   
@@ -78,8 +78,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Rejstřík" href="../genindex.html" />
     <link rel="search" title="Vyhledávání" href="../search.html" />
-    <link rel="next" title="Resources for learning more" href="Resources.html" />
-    <link rel="prev" title="Presentation of microscopy images" href="Presentation_images.html" />
+    <link rel="next" title="Zdroje pro další informace" href="Resources.html" />
+    <link rel="prev" title="Prezentace mikroskopických snímků" href="Presentation_images.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="cs"/>
   </head>
@@ -192,10 +192,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Sample Acquisition</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Picking.html">Choosing the right microscopy modality</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Practical_considerations.html">Practical considerations</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Resources.html">Resources for learning more</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Introduction.html">Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Picking.html">Volba správné mikroskopické metody</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Practical_considerations.html">Praktické úvahy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../02_Sample_acquisition/Resources.html">Další zdroje informací</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Image Analysis and Data Handling</span></p>
 <ul class="nav bd-sidenav">
@@ -218,10 +218,10 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Interpretation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Presentation_images.html">Presentation of microscopy images</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistics</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Resources.html">Resources for learning more</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Introduction.html">Úvod</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Presentation_images.html">Prezentace mikroskopických snímků</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Statistika</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Resources.html">Zdroje pro další informace</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Additional Resources</span></p>
 <ul class="nav bd-sidenav">
@@ -430,7 +430,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Statistics</h1>
+    <h1>Statistika</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -440,17 +440,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction">Dimensionality reduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Úvod</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction">Redukce rozměrů</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">Co to je?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-correction">Batch correction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-correction">Oprava dávkového efektu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Co to je?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normality-testing">Normality testing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normality-testing">Testování normality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Co to je?</a></li>
 </ul>
 </li>
 </ul>
@@ -465,34 +465,33 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="statistics">
-<h1>Statistics<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h1>
+<h1>Statistika<a class="headerlink" href="#statistics" title="Permalink to this heading">#</a></h1>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
-<p>Quantitative data is often summarized and analysed with statistical methods and visualized with plots/graphs/diagrams. Statistical methods reveal quantitative trends, patterns, and outliers in data, while plots and graphs help to convey them to audiences. Carrying out a suitable statistical analysis and choosing a suitable chart type for your data, identifying their potential pitfalls, and faithfully realising the analysis or generating the chart with suitable software are essential to back up experimental conclusions with data and reach communication goals.</p>
+<h2>Úvod<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<p>Kvantitativní data jsou často shrnuta a analyzována statistickými metodami a vizualizována pomocí grafů/grafů/diagramů. Statistické metody odhalují kvantitativní trendy, vzorce a odlehlé hodnoty v datech, zatímco grafy a grafy je pomáhají zprostředkovat publiku. Provedení vhodné statistické analýzy a výběr vhodného typu grafu pro vaše data, identifikace jejich potenciálních úskalí a věrná realizace analýzy nebo generování grafu pomocí vhodného softwaru jsou nezbytné pro zálohování experimentálních závěrů daty a dosažení komunikačních cílů.</p>
 </section>
 <section id="dimensionality-reduction">
-<h2>Dimensionality reduction<a class="headerlink" href="#dimensionality-reduction" title="Permalink to this heading">#</a></h2>
+<h2>Redukce rozměrů<a class="headerlink" href="#dimensionality-reduction" title="Permalink to this heading">#</a></h2>
 <section id="what-is-it">
-<h3>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this heading">#</a></h3>
-<p>Dimensionality reduction (also called dimension reduction) aims at mapping high-dimensional data onto a lower-dimensional space in order to better reveal trends and patterns. Algorithms performing this task attempt to retain as much information as possible when reducing the dimensionality of the data: this is achieved by assigning importance scores to individual features, removing redundancies, and identifying uninformative (for instance constant) features. Dimensionality reduction is an important step in quantitative analysis as it makes data more manageable and easier to visualize. It is also an important preprocessing step in many downstream analysis algorithms, such as machine learning classifiers.</p>
+<h3>Co to je?<a class="headerlink" href="#what-is-it" title="Permalink to this heading">#</a></h3>
+<p>Redukce rozměrů (také nazývaná redukce dimenze) se zaměřuje na mapování vysokorozměrných dat do méněrozměrného prostoru, aby bylo možné lépe odhalit trendy a vzory. Algoritmy provádějící tento úkol se snaží při snižování dimenzionality dat uchovat co nejvíce informací: toho je dosaženo přiřazováním skóre důležitosti jednotlivým znakům, odstraňováním nadbytečnosti a identifikací neinformativních (například konstantních) znaků. Redukce rozměrů je důležitým krokem v kvantitativní analýze, protože umožňuje lépe spravovat data a snáze je vizualizovat. Je to také důležitý krok předzpracování v mnoha následných analytických algoritmech, jako jsou klasifikátory strojového učení.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📏 How do I do it?<div class="sd-summary-down docutils">
+📏 Jak to udělám?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">The most traditional dimensionality reduction technique is principal component analysis (PCA)<span id="id1"><sup><a class="reference internal" href="../bibliography.html#id106" title="Jake Lever, Martin Krzywinski, and Naomi Altman. Principal component analysis. Nat. Methods, 14:641–642, July 2017.">50</a></sup></span>. In a nutshell, PCA recovers a linear transformation of the input data into a new coordinate system (the principal components) that concentrates variation into its first axes. This is achieved by relying on classical linear algebra, by computing an eigendecomposition of the covariance matrix of the data. As a result, the first 2 or 3 principal components provide a low-dimensional version of the data distribution that is faithful to the variance that was originally present.
-More advanced dimensionality reduction methods that are popular in biology include t-distributed stochastic neighbor embedding (t-SNE) and Uniform Manifold Approximation and Projection (UMAP). In contrast to PCA, these methods are non-linear and can therefore exploit more complex relationships between features when building the lower-dimensional representation. This however comes at a cost: both t-SNE and UMAP are stochastic, meaning that the results they produce are highly dependent on the choice of hyperparameters and can differ across different runs.</p>
+<p class="sd-card-text">Nejtradičnější technikou redukce rozměrů je analýza hlavních komponent (PCA)<span id="id1"><sup><a class="reference internal" href="../bibliography.html#id106" title="Jake Lever, Martin Krzywinski, and Naomi Altman. Principal component analysis. Nat. Methods, 14:641–642, July 2017.">50</a></sup></span>. Stručně řečeno, PCA obnovuje lineární transformaci vstupních dat do nového souřadnicového systému (hlavních komponent), který koncentruje variace do svých prvních os. Toho je dosaženo spoléháním se na klasickou lineární algebru, počítáním vlastního rozkladu kovarianční matice dat. Výsledkem je, že první 2 nebo 3 hlavní komponenty poskytují nízkorozměrnou verzi distribuce dat, která je věrná rozptylu, který byl původně přítomen. Pokročilejší metody redukce rozměrů, které jsou populární v biologii, zahrnují t-distribuované stochastické vkládání sousedů (t-SNE) a Uniform Manifold Approximation and Projection (UMAP). Na rozdíl od PCA jsou tyto metody nelineární a mohou proto využívat složitější vztahy mezi prvky při vytváření reprezentace nižší dimenze. To však něco stojí: t-SNE i UMAP jsou stochastické, což znamená, že výsledky, které produkují, jsou vysoce závislé na výběru hyperparametrů a mohou se lišit v různých běhech.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span style="color: red">⚠️</span> Where can things go wrong?<div class="sd-summary-down docutils">
+<span style="color: red"> ⚠️ </span> Kde se může něco pokazit?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Although reducing dimensionality can be very useful for data exploration and analysis, it may also wipe information or structure that is relevant to the problem being studied. This is famously well illustrated by the <a class="reference external" href="https://cran.r-project.org/web/packages/datasauRus/vignettes/Datasaurus.html">Datasaurus dataset</a>, which demonstrates how very differently-looking sets of measurements can become indistinguishable when described by a small set of summary statistics. The best way to minimize this risk is to start by visually exploring the data whenever possible, and carefully checking any underlying assumptions of the dimensionality reduction method being used to ensure that they hold for the considered data. Dimensionality reduction may also enhance and reveal patterns that are not biologically relevant, due to noise or systematic artifacts in the original data (see Batch effect correction section below). In addition to applying normalization and batch correction to the data prior to reducing dimensionality, some dimensionality reduction methods also offer so-called regularization strategies to mitigate this. In the end, any pattern identified in dimension-reduced data should be considered while keeping in mind the biological context of the data in order to interpret the results appropriately.</p>
+<p class="sd-card-text">Ačkoli snížení dimenzionality může být velmi užitečné pro průzkum a analýzu dat, může také vymazat informace nebo strukturu, které jsou relevantní pro studovaný problém. Skvěle to ilustruje [soubor dat Datasaurus] (<a class="reference external" href="https://cran.r-project.org/web/packages/datasauRus/vignettes/Datasaurus.html">https://cran.r-project.org/web/packages/datasauRus/vignettes/Datasaurus.html</a>), který ukazuje, jak se velmi odlišně vyhlížející soubory měření mohou stát nerozeznatelnými. když je popsána malou sadou souhrnných statistik. Nejlepším způsobem, jak toto riziko minimalizovat, je začít vizuálním prozkoumáním dat, kdykoli je to možné, a pečlivou kontrolou všech základních předpokladů použité metody redukce rozměrů, aby bylo zajištěno, že platí pro uvažovaná data. Redukce rozměrů může také zlepšit a odhalit vzory, které nejsou biologicky relevantní, kvůli šumu nebo systematickým artefaktům v původních datech (viz část Korekce dávkového efektu níže). Kromě aplikace normalizace a dávkové korekce na data před snížením dimenzionality nabízejí některé metody redukce dimenzionality také takzvané strategie regularizace pro zmírnění tohoto problému. Nakonec by měl být zvážen jakýkoli vzor identifikovaný v datech s omezenými rozměry, přičemž je třeba mít na paměti biologický kontext dat, aby bylo možné výsledky vhodně interpretovat.</p>
 </div>
 </details><!-- 
 Commented out text not shown on the page
@@ -500,7 +499,7 @@ Commented out text not shown on the page
  -->
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📚🤷‍♀️ Where can I learn more?<div class="sd-summary-down docutils">
+📚🤷‍♀️ Kde se mohu dozvědět více?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -514,27 +513,27 @@ Commented out text not shown on the page
 </details></section>
 </section>
 <section id="batch-correction">
-<h2>Batch correction<a class="headerlink" href="#batch-correction" title="Permalink to this heading">#</a></h2>
+<h2>Oprava dávkového efektu<a class="headerlink" href="#batch-correction" title="Permalink to this heading">#</a></h2>
 <section id="id3">
-<h3>What is it?<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<p>Batch effects are systematic variations across samples correlated with experimental conditions (such as different times of the day, different days of the week, or different experimental tools) that are not related to the biological process of interest. Batch effects must be mitigated prior to making comparisons across several datasets as they impact the reproducibility and reliability of computational analysis and can dramatically bias conclusions. Algorithms for batch effect correction address this by identifying and quantifying sources of technical variation, and adjusting the data so that these are minimized while the biological signal is preserved. Most batch effect correction methods were originally developed for microarray data and sequencing data, but can be adapted to feature vectors extracted from images.</p>
+<h3>Co to je?<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<p>Dávkové efekty jsou systematické variace napříč vzorky korelující s experimentálními podmínkami (jako jsou různé denní doby, různé dny v týdnu nebo různé experimentální nástroje), které nesouvisejí se sledovaným biologickým procesem. Dávkové efekty musí být zmírněny před provedením srovnání napříč několika datovými soubory, protože ovlivňují reprodukovatelnost a spolehlivost výpočetní analýzy a mohou dramaticky zkreslit závěry. Algoritmy pro korekci dávkového efektu to řeší identifikací a kvantifikací zdrojů technických variací a úpravou dat tak, aby byly minimalizovány, zatímco biologický signál je zachován. Většina metod korekce dávkového efektu byla původně vyvinuta pro data microarray a sekvenační data, ale lze je upravit pro příznakové vektory extrahované z obrázků.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📏 How do I do it?<div class="sd-summary-down docutils">
+📏 Jak to udělám?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Two of the most used methods for batch effect correction are ComBat and Surrogate Variable Analysis (SVA), depending on whether the sources of batch effects are known a priori or not. In a nutshell, ComBat involves three steps: 1) dividing the data into known batches, 2) estimating batch effect by fitting a linear model that includes the batch as a covariate and 3) adjusting the data by removing the estimated effect of the batch from each data point. In contrast, SVA aims at identifying „surrogate variables“ that capture unknown sources of variability in the data. The surrogate variables can be estimated relying on linear algebra methods (such as singular value decomposition) or through a Bayesian factor analysis model. SVA has been demonstrated to reduce unobserved sources of variability and is therefore of particular help when identifying possible causes of batch effects is challenging, but comes at a higher computational cost than ComBat.</p>
+<p class="sd-card-text">Dvě z nejpoužívanějších metod pro korekci dávkového efektu jsou ComBat a Surrogate Variable Analysis (SVA), v závislosti na tom, zda jsou zdroje dávkových efektů známy a priori nebo ne. Stručně řečeno, ComBat zahrnuje tři kroky: 1) rozdělení dat do známých šarží, 2) odhad účinku šarže přizpůsobením lineárního modelu, který zahrnuje šarži jako kovariát a 3) úpravu dat odstraněním odhadovaného účinku šarže z každý datový bod. Naproti tomu SVA se zaměřuje na identifikaci „náhradních proměnných“, které zachycují neznámé zdroje variability v datech. Náhradní proměnné lze odhadnout pomocí metod lineární algebry (jako je dekompozice singulárních hodnot) nebo pomocí modelu Bayesovské faktorové analýzy. Bylo prokázáno, že SVA snižuje nepozorované zdroje variability, a proto je zvláště nápomocný, když je identifikace možných příčin dávkových efektů náročná, ale přináší vyšší výpočetní náklady než ComBat.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span style="color: red">⚠️</span> Where can things go wrong?<div class="sd-summary-down docutils">
+<span style="color: red"> ⚠️ </span> Kde se může něco pokazit?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">As important as it is for analysis, batch effect correction can go wrong when too much or too little of it is done. Both over- and under-correction can happen when methods are not used properly or when their underlying assumptions are not met. As a result, either biological signals can be removed (in the case of over-correction) or irrelevant sources of variation can remain (in the case of under-correction) - both potentially leading to inaccurate conclusions. Batch effect correction can be particularly tricky when the biological variation of interest is suspected to confound with the batch. In this case in particular (although always a good approach), the first lines of fight against batch effects should be thought-through experimental design and careful quality control, as well as visual exploration of the data<span id="id4"><sup><a class="reference internal" href="../bibliography.html#id29" title="Samuel J Lord, Katrina B Velle, R Dyche Mullins, and Lillian K Fritz-Laylin. SuperPlots: communicating reproducibility and variability in cell biology. J. Cell Biol., June 2020.">52</a></sup></span>. Plotting data batch-by-batch before applying any correction can help confirm (or infirm) that the observed trends are similar across batches.</p>
+<p class="sd-card-text">Jakkoli je to pro analýzu důležité, může se dávková korekce efektu pokazit, když se toho udělá příliš mnoho nebo příliš málo. K nadměrné i nedostatečné korekci může dojít, když se metody nepoužívají správně nebo když nejsou splněny jejich základní předpoklady. V důsledku toho mohou být buď odstraněny biologické signály (v případě nadměrné korekce), nebo mohou zůstat irelevantní zdroje variací (v případě nedostatečné korekce) – obojí může vést k nepřesným závěrům. Korekce efektu šarže může být obzvláště obtížná, když existuje podezření, že se sledovaná biologická variace zaměňuje se šarží. Zejména v tomto případě (ačkoli vždy dobrý přístup) by první linie boje proti dávkovým efektům měly být promyšlený experimentální design a pečlivá kontrola kvality, stejně jako vizuální průzkum data<span id="id4"><sup><a class="reference internal" href="../bibliography.html#id29" title="Samuel J Lord, Katrina B Velle, R Dyche Mullins, and Lillian K Fritz-Laylin. SuperPlots: communicating reproducibility and variability in cell biology. J. Cell Biol., June 2020.">52</a></sup></span>. Vynesení dat po jednotlivých šaržích před aplikací jakékoli korekce může pomoci potvrdit (nebo potvrdit), že pozorované trendy jsou ve všech šaržích podobné.</p>
 <!--
 Commented out text not shown on the page
 
@@ -543,7 +542,7 @@ One major thing that would be nice to clarify in this particular case - how do y
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📚🤷‍♀️ Where can I learn more?<div class="sd-summary-down docutils">
+📚🤷‍♀️ Kde se mohu dozvědět více?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -557,32 +556,31 @@ One major thing that would be nice to clarify in this particular case - how do y
 </details></section>
 </section>
 <section id="normality-testing">
-<h2>Normality testing<a class="headerlink" href="#normality-testing" title="Permalink to this heading">#</a></h2>
+<h2>Testování normality<a class="headerlink" href="#normality-testing" title="Permalink to this heading">#</a></h2>
 <section id="id7">
-<h3>What is it?<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
-<p>Normality testing is about assessing whether data follow a Gaussian (or nomal) distribution. Because the Gaussian distribution is frequently found in nature and has important mathematical properties, normality is a core assumption in many widely-used statistical tests. When this assumption is violated, their conclusions may not hold or be flawed. Normality testing is therefore an important step of the data analysis pipeline prior to any sort of statistical testing.</p>
+<h3>Co to je?<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<p>Testování normality je o posouzení, zda data sledují Gaussovo (nebo normální) rozdělení. Protože Gaussovo rozdělení se v přírodě často vyskytuje a má důležité matematické vlastnosti, je normalita základním předpokladem v mnoha široce používaných statistických testech. Když je tento předpoklad porušen, jejich závěry nemusí platit nebo může být závěr chybný. Testování normality je proto důležitým krokem v procesu analýzy dat před jakýmkoliv druhem statistického testování.</p>
 <details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📏 How do I do it?<div class="sd-summary-down docutils">
+📏 Jak to udělám?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Normality of a data distribution can be qualitatively assessed through plotting, for instance relying on a histogram. For a more quantitative readout, statistical methods such as the Kolmogorov-Smirnov (KS) and Shapiro-Wilk tests (among many others) report how much the observed data distribution deviates from a Gaussian. These tests usually return and a p-value linked to the hypothesis that the data are sampled from a Gaussian distribution. A high p-value indicates that the data are not inconsistent with a normal distribution, but is not sufficient to prove that they indeed follow a Gaussian.
-A p-values smaller than a pre-defined significance threshold (usually 0.05) indicates that the data are not sampled from a normal distribution.</p>
+<p class="sd-card-text">Normální distribuce dat může být kvalitativně posouzena pomocí grafu, například spoléháním se na histogram. Kvantitativně vhodnější statistické metody, jako je Kolmogorov-Smirnov (KS) a Shapiro-Wilkův test (kromě mnoha dalších), udávají, jak moc se pozorované rozložení dat odchyluje od Gaussova rozdělení. Tyto testy se obvykle vrátí p-hodnotu spojenou s hypotézou, že data jsou vzorkována z Gaussova rozdělení. Vysoká p-hodnota naznačuje, že data nejsou v rozporu s normálním rozdělením, ale není dostatečná k prokázání, že skutečně sledují Gaussovu hodnotu. P-hodnoty menší než předem definovaný práh významnosti (obvykle 0,05) znamenají, že data nejsou odebrána z normální distribuce.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-<span style="color: red">⚠️</span> Where can things go wrong?<div class="sd-summary-down docutils">
+<span style="color: red"> ⚠️ </span> Kde se může něco pokazit?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
 </summary><div class="sd-summary-content sd-card-body docutils">
-<p class="sd-card-text">Although lots of the “standard” statistical methods have been designed with a normnality assumption, alternative approaches exist for non-normally-ditributed data. Many biological processes result in multimodal “states” (for instance differentiation) that are inherently not Gaussian. Normality testing should therefore not be mistaken for a quality assessment of the data: it merely informs on the types of tools that are appropriate to use when analyzing them.</p>
+<p class="sd-card-text">Ačkoli mnoho „standardních“ statistických metod bylo navrženo s předpokladem normality, existují alternativní přístupy pro data, která nemají normální distribuci. Mnoho biologických procesů má za následek multimodální „stavy“ (například diferenciace), které ve své podstatě nejsou Gaussovské. Testování normality by proto nemělo být zaměňováno za hodnocení kvality dat: pouze informuje o typech nástrojů, které je vhodné použít při jejich analýze.</p>
 </div>
 </details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
 <summary class="sd-summary-title sd-card-header">
-📚🤷‍♀️ Where can I learn more?<div class="sd-summary-down docutils">
+📚🤷‍♀️ Kde se mohu dozvědět více?<div class="sd-summary-down docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
 <div class="sd-summary-up docutils">
 <svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
@@ -637,7 +635,7 @@ Commented out text not shown on the page
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">předchozí</p>
-        <p class="prev-next-title">Presentation of microscopy images</p>
+        <p class="prev-next-title">Prezentace mikroskopických snímků</p>
       </div>
     </a>
     <a class="right-next"
@@ -645,7 +643,7 @@ Commented out text not shown on the page
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">další</p>
-        <p class="prev-next-title">Resources for learning more</p>
+        <p class="prev-next-title">Zdroje pro další informace</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -664,17 +662,17 @@ Commented out text not shown on the page
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Introduction</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction">Dimensionality reduction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#introduction">Úvod</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensionality-reduction">Redukce rozměrů</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-it">Co to je?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-correction">Batch correction</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#batch-correction">Oprava dávkového efektu</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Co to je?</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normality-testing">Normality testing</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">What is it?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normality-testing">Testování normality</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">Co to je?</a></li>
 </ul>
 </li>
 </ul>
