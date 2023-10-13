@@ -35,7 +35,9 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build book
+        jb config sphinx book             
+        sphinx-build -b html -D language=cs book _build/html
+        rm book/conf.py
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
