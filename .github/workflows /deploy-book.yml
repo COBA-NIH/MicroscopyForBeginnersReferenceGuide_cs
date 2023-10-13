@@ -39,9 +39,6 @@ jobs:
 
 # Run on pushes to main, 5pm, or when I say so
 on:
-  schedule:
-    - cron: '0 17 * * *'
   push:
     branches:
     - main
-  workflow_dispatch:
