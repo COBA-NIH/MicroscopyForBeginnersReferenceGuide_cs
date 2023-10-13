@@ -1,19 +1,5 @@
 name: deploy-book
 
-# Run on pushes to main, 5pm, or when I say so
-on:
-  schedule:
-    - cron: '0 17 * * *'
-  workflow_dispatch:
-  push:
-    branches:
-    - main
-    # If your git repository has the Jupyter Book within some-subfolder next to
-    # unrelated files, you can make this run only if a file within that specific
-    # folder has been modified.
-    #
-    # paths:
-    # - some-subfolder/**
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
@@ -50,3 +36,12 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: book/_build/html
         cname: cz.bioimagingguide.org
+
+# Run on pushes to main, 5pm, or when I say so
+on:
+  schedule:
+    - cron: '0 17 * * *'
+  push:
+    branches:
+    - main
+  workflow_dispatch:
