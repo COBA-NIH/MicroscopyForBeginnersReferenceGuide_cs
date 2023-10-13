@@ -1,5 +1,10 @@
 name: deploy-book
 
+# Run on pushes to main, 5pm, or when I say so
+on:
+  push:
+    branches:
+    - main
 
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
@@ -36,9 +41,3 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: book/_build/html
         cname: cz.bioimagingguide.org
-
-# Run on pushes to main, 5pm, or when I say so
-on:
-  push:
-    branches:
-    - main
