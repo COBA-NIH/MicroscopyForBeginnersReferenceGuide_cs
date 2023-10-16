@@ -1,3 +1,3 @@
-# MicroscopyForBeginnersReferenceGuide_cz
+# MicroscopyForBeginnersReferenceGuide_cs
 
 Czech translation of bioimagingguide.org
