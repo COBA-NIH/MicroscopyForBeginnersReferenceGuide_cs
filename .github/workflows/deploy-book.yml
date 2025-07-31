@@ -28,6 +28,11 @@ jobs:
         repository: COBA-NIH/MicroscopyForBeginnersReferenceGuide
         path: book
 
+    # Update the headers 
+    - name: Update headers
+      run: |
+        python book/edit_headers.py cs
+
     - name: Install dependencies
       run: |
         pip install -r book/requirements.txt
